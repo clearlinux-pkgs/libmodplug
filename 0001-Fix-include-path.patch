@@ -1,0 +1,25 @@
+From 7d94942a5eb67e25b50669285248a23025dcc222 Mon Sep 17 00:00:00 2001
+From: Auke Kok <auke-jan.h.kok@intel.com>
+Date: Fri, 30 Aug 2019 10:48:59 -0700
+Subject: [PATCH] Fix include path.
+
+---
+ libmodplug.pc.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libmodplug.pc.in b/libmodplug.pc.in
+index bbf05f9..1c6feb7 100644
+--- a/libmodplug.pc.in
++++ b/libmodplug.pc.in
+@@ -1,7 +1,7 @@
+ prefix=@prefix@
+ exec_prefix=@exec_prefix@
+ libdir=@libdir@
+-includedir=${prefix}/include
++includedir=${prefix}/include/libmodplug
+ 
+ Name: libmodplug
+ Description: The ModPlug mod file playing library.
+-- 
+2.23.0
+

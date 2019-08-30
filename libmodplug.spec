@@ -4,13 +4,14 @@
 #
 Name     : libmodplug
 Version  : 0.8.9.0
-Release  : 1
+Release  : 2
 URL      : https://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz
 Source0  : https://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz
 Summary  : The ModPlug mod file playing library.
 Group    : Development/Tools
 License  : Public-Domain
 Requires: libmodplug-lib = %{version}-%{release}
+Patch1: 0001-Fix-include-path.patch
 
 %description
 libmodplug - the library which was part of the Modplug-xmms project
@@ -37,13 +38,14 @@ lib components for the libmodplug package.
 
 %prep
 %setup -q -n libmodplug-0.8.9.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567138911
+export SOURCE_DATE_EPOCH=1567187428
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -63,7 +65,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1567138911
+export SOURCE_DATE_EPOCH=1567187428
 rm -rf %{buildroot}
 %make_install
 
