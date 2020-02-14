@@ -5,8 +5,8 @@
 Name     : libmodplug
 Version  : 0.8.9.0
 Release  : 2
-URL      : https://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz
-Source0  : https://downloads.sourceforge.net/modplug-xmms/libmodplug-0.8.9.0.tar.gz
+URL      : https://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz
+Source0  : https://sourceforge.net/projects/modplug-xmms/files/libmodplug/0.8.9.0/libmodplug-0.8.9.0.tar.gz
 Summary  : The ModPlug mod file playing library.
 Group    : Development/Tools
 License  : Public-Domain
